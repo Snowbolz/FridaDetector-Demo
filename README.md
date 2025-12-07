@@ -2,7 +2,6 @@
 
 [![Android](https://img.shields.io/badge/Platform-Android-3ddc84?style=flat-square&logo=android&logoColor=white)](https://developer.android.com)
 [![C++](https://img.shields.io/badge/Native-C++17-00599c?style=flat-square&logo=cplusplus&logoColor=white)](https://isocpp.org/)
-[![License](https://img.shields.io/badge/License-Research-yellow?style=flat-square)](LICENSE)
 
 > **Runtime Application Self-Protection against Dynamic Instrumentation**
 
