@@ -207,12 +207,10 @@ It is intended to demonstrate runtime application self-protection techniques and
 ## References
 
 - [Frida Dynamic Instrumentation Toolkit](https://frida.re/)
-- [ARM64 Architecture Reference](https://developer.arm.com/documentation/ddi0596/latest/)
 - [ELF Format Specification](https://refspecs.linuxfoundation.org/elf/elf.pdf)
 - [Linux /proc Filesystem](https://www.kernel.org/doc/Documentation/filesystems/proc.txt)
+- [Undetected-frida](https://github.com/zer0def/undetected-frida)
+- [Frida-Detection](https://github.com/apkunpacker/Frida-Detection)
+- [DetectFrida](https://github.com/darvincisec/DetectFrida)
 
 ---
-
-## License
-
-This project is licensed for research and educational purposes. See [LICENSE](LICENSE) for details.
