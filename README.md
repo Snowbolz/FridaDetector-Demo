@@ -169,28 +169,6 @@ Toggle modes via the on-screen button.
 
 ---
 
-## Security Considerations
-
-### Why Direct Syscalls?
-Standard library functions (`open`, `read`, `fopen`) can be hooked by instrumentation frameworks. This project bypasses libc entirely:
-
-```cpp
-// ARM64 direct syscall
-__asm__ volatile("svc #0" : "=r"(x0) : "r"(x8), "r"(x1) : "memory");
-```
-
-### Why Hash-Based Detection?
-Plaintext strings like `"frida"` are trivially patched. This project uses **compile-time FNV-1a hashes**:
-
-```cpp
-constexpr uint32_t FRIDA_AGENT = HASH("frida-agent");
-```
-
-### Why RAM vs Disk Comparison?
-Inline hooking **must** modify function preambles in memory. By reading original bytes from disk using direct syscalls, modifications are detected regardless of hook implementation.
-
----
-
 ## Disclaimer
 
 **This project is provided for educational and research purposes only.**
