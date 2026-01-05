@@ -100,41 +100,6 @@ Features a **"Delayed Lockdown"** mechanism with multiple termination strategies
 
 ---
 
-## Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        Kotlin UI Layer                           │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐ │
-│  │ MainActivity │  │ RaspManager │  │ Detection Callbacks      │ │
-│  └──────┬──────┘  └──────┬──────┘  └────────────┬────────────┘ │
-├─────────┴────────────────┴──────────────────────┴───────────────┤
-│                         JNI Bridge                               │
-├─────────────────────────────────────────────────────────────────┤
-│                     Native RASP Engine (C++)                     │
-│  ┌─────────────────────────────────────────────────────────────┐│
-│  │                      lib file                               ││
-│  │  - Memory Maps Scan      - Inline Hook Detection            ││
-│  │  - Tracer PID Check      - Libc Integrity Check             ││
-│  │  - Thread Analysis       - GOT/PLT Validation               ││
-│  │  - Port Scanning         - Statistical Timing               ││
-│  │  - Anonymous Exec Scan   - Injection Detection              ││
-│  └─────────────────────────────────────────────────────────────┘│
-│  ┌────────────────┐  ┌────────────────┐  ┌──────────────────┐  │
-│  │ syscall_utils  │  │  kill_methods  │  │ string_obfuscator│  │
-│  │ Direct SVC #0  │  │ Multi-strategy │  │   OBFUSCATE()    │  │
-│  └────────────────┘  └────────────────┘  └──────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-                              │
-                              ▼ Direct Syscalls
-┌─────────────────────────────────────────────────────────────────┐
-│                        Linux Kernel                              │
-│  /proc/self/maps  │  /proc/self/status  │  /proc/net/tcp        │
-└─────────────────────────────────────────────────────────────────┘
-```
-
----
-
 ## Installation
 
 **Prerequisites:**
