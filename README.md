@@ -141,18 +141,6 @@ Toggle modes via the on-screen button.
 
 ---
 
-## Disclaimer
-
-**This project is provided for educational and research purposes only.**
-
-It is intended to demonstrate runtime application self-protection techniques and should be used responsibly. The authors are not responsible for any misuse of this software.
-
-- Do not use in production without proper legal review
-- Testing should only be performed on applications you own or have explicit permission to analyze
-- This software is provided "as-is" without warranty of any kind
-
----
-
 ## References
 
 - [Frida Dynamic Instrumentation Toolkit](https://frida.re/)
