@@ -6,6 +6,7 @@
 > **Runtime Application Self-Protection against Dynamic Instrumentation**
 
 A proof-of-concept demonstrating runtime protection techniques for Android applications against dynamic analysis and instrumentation frameworks.
+<img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/83575d9d-e671-47f8-a2dd-37751e35dce7" /> <img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/31cc1c16-0595-4ef7-9c32-8cf9e241c46b" /> <img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/bad58566-a42f-4892-9ca0-45bf6f7a79c4" />
 
 ---
 
